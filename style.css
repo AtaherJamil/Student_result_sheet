@@ -29,10 +29,6 @@ body {
 .box1 button {
   float: right;
   margin-right: 200px;
-  z-index: 100;
-}
-
-.click {
   padding: 5px 15px;
   font-size: 16px;
   cursor: pointer;
