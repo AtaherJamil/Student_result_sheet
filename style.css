@@ -1,7 +1,7 @@
 body {
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: auto;
 }
 #slide {
   display: block;
@@ -21,7 +21,6 @@ body {
   font-weight: 800;
   font-family: "Roboto";
 }
-
 .box1 h3 {
   float: left;
   margin-left: 200px;
@@ -40,29 +39,41 @@ body {
   border: none;
   border-radius: 15px;
   box-shadow: 0 5px #999;
+  
 }
-.click:hover {
+.box1 button:hover {
   background-color: #0a66c2;
 }
-.click:active {
+.box1 button:active {
   background-color: #0a66c2;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .image {
-  position: fixed;
-  opacity: 50%;
+  position: absolute;
+  opacity: 20%;
   height: 90vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: -100;
-}
+} 
 
 .container {
   margin-top: 60px;
 }
+.table{
+  background: transparent;
+}
+h6{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  border-style: dotted;
+  border-color: red;
+}
+
 
 #foot {
   position: fixed;

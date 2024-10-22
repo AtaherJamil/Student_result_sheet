@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="addstudent.php" method="post">
+        <form action="insert_data.php" method="post">
           <?php
           /**
            * The form elements for adding a new student
@@ -21,36 +21,44 @@
             <input type="text" class="form-control" id="fullName" name="fullName">
           </div>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Semester:</label>
-            <select name="semester" id="" class="form-control">
-              <?php
-              /**
-               * The list of semesters from which the user can select
-               */
-              $semesters = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
-              foreach ($semesters as $semester) {
-                echo "<option value=\"$semester\">$semester</option>";
-              }
-              ?>
-            </select>
-          </div>
-           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Shift</label>
-            <select name="shift" id="shift" class="form-control">
-              <?php
-              /**
-               * The list of shifts from which the user can select
-               */
-              $shifts = ['1st', '2nd'];
-              foreach ($shifts as $shift) {
-                echo "<option value=\"$shift\">$shift</option>";
-              }
-              ?>
-            </select>
+            <input type="text" name="shift" id="shift" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 1st Semester CGPA:</label>
+            <input type="float" id="1stS" class="form-control" name="1st">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label" name="2nd"> 2nd Semester CGPA:</label>
+            <input type="float" id="2ndS" class="form-control" name="2nd">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 3rd Semester CGPA:</label>
+            <input type="float" id="3rdS" class="form-control" name="3rd">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 4th Semester CGPA:</label>
+            <input type="float" id="4thS" class="form-control" name="4th">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 5th Semester CGPA:</label>
+            <input type="float" id="5thS" class="form-control" name="5th">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 6th Semester CGPA:</label>
+            <input type="float" id="6thS" class="form-control" name="6th">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 7th Semester CGPA:</label>
+            <input type="float" id="7thS" class="form-control" name="7th">
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"> 8th Semester CGPA:</label>
+            <input type="float" id="8thS" class="form-control" name="8th">
           </div>
            <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Phone Number:</label>
-            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+            <label for="recipient-name" class="col-form-label">Overall CGPA:</label>
+            <button class="btn btn-success"> Overall CGPA Would auto Canculate </button>
           </div>
           
           <?php
@@ -60,7 +68,7 @@
           ?>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" name="addBtn" class="btn btn-primary">Add Student</button>
+            <input type="submit" name="add_student" class="btn btn-success" value="ADD">
           </div>
         </form>
       </div>
